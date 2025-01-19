@@ -25,7 +25,7 @@ def main():
         custom_vision_project = training_client.get_project(project_id)
 
         # Upload and tag images
-        Upload_Images("C:/Users/MSI/mslearn-ai-vision/Labfiles/03-object-detection/Python/train-detector/images")
+        Upload_Images("train-detector/images")
     except Exception as ex:
         print(ex)
 
@@ -41,7 +41,7 @@ def Upload_Images(folder):
     tagged_images_with_regions = []
 
     # Get the images and tagged regions from the JSON file
-    with open("C:/Users/MSI/mslearn-ai-vision/Labfiles/03-object-detection/Python/train-detector/tagged-images.json", 'r') as json_file:
+    with open("tagged-images.json", 'r') as json_file:
         tagged_images = json.load(json_file)
         for image in tagged_images['files']:
             # Get the filename
