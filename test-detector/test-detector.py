@@ -21,7 +21,7 @@ def main():
         prediction_client = CustomVisionPredictionClient(endpoint=prediction_endpoint, credentials=credentials)
 
         # Load image and get height, width and channels
-        image_file = 'C:/Users/MSI/mslearn-ai-vision/Labfiles/03-object-detection/Python/test-detector/produce.jpg'
+        image_file = 'produce.jpg'
         print('Detecting objects in', image_file)
         image = Image.open(image_file)
         h, w, ch = np.array(image).shape
